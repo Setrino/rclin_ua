@@ -1549,6 +1549,7 @@ html[data-useragent*='MSIE 10.0'] {
 .topBarInLogoAreaCell .btIconWidgetIcon, .topBarInLogoAreaCell .btIconWidgetContent {
 	display: table-cell;
 	vertical-align: middle;
+	font-weight: bold;
 }
 
 .topBarInLogoAreaCell .btIconWidgetIcon {
