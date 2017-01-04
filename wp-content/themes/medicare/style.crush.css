@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Medicare
+Theme Name: RCLIN Ukraine (Medicare)
 Theme URI: http://medicare.bold-themes.com
 Description: Responsive theme.
 Version: 1.1.0
@@ -2229,10 +2229,10 @@ body.btMenuHorizontal.btBelowMenu .mainHeader {
     box-shadow: none;
     }
 body.btMenuHorizontal.btStickyHeaderActive.btDarkSkin .mainHeader {
-    background-color: rgba(29,31,39,.9);
+    background-color: rgba(29,31,39,1.0);
     }
 body.btMenuHorizontal.btStickyHeaderActive.btLightSkin .mainHeader {
-    background-color: rgba(255,255,255,.9);
+    background-color: rgba(255,255,255,1.0);
     }
 body.btMenuHorizontal.btStickyHeaderActive.btStickyHeaderOpen .mainHeader {
     -webkit-transition: transform .5s cubic-bezier(.230,1,.320,1);
@@ -2872,9 +2872,7 @@ html[data-useragent*='MSIE 10.0'] body.btMenuHorizontal .menuPort ul > li:hover 
     font-size: 14px;
     margin: 0 0 3px;
     }
-.btIconWidgetText {
-    color: rgba(68,68,68,.4);
-    }
+
 .btDarkSkin .btIconWidgetText,
 .btLightSkin .btDarkSkin .btIconWidgetText {
     color: rgba(255,255,255,.7);
