@@ -46,7 +46,8 @@ jQuery( function ( $ ) {
 		initUploader: function () {
 			var isIE = navigator.userAgent.indexOf( 'Trident/' ) != - 1 || navigator.userAgent.indexOf( 'MSIE ' ) != - 1,
 				self = this,
-				extensions = this.getExtensions().join( ',' );
+				extensions = this.getExtensions().join( ',' ),
+				max_file_size;
 			this.plupload = $.extend( true, {
 				multipart_params: {},
 				multipart: true,
@@ -55,6 +56,10 @@ jQuery( function ( $ ) {
 				browse_button: this.browser,
 				filters: {}
 			}, wp.Uploader.defaults );
+
+			if( max_file_size = this.controller.get( 'maxFileSize' ) ) {
+				this.plupload.filters.max_file_size = max_file_size;
+			}
 
 			if ( extensions ) {
 				this.plupload.filters.mime_types = [{title: i18nRwmbMedia.select, extensions: extensions}];
@@ -107,7 +112,7 @@ jQuery( function ( $ ) {
 					// so listeners to the upload queue can track and display upload progress.
 					file.attachment = wp.media.model.Attachment.create( attributes );
 					wp.Uploader.queue.add( file.attachment );
-					self.controller.addItems( [file.attachment] );
+					self.controller.get( 'items' ).add( [file.attachment] );
 				} );
 
 				up.refresh();
